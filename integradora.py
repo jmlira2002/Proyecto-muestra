@@ -35,12 +35,12 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-df1 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police1.csv")
-df2 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police2.csv")
-df3 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police3.csv")
-df4 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police4.csv")
-df5 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police5.csv")
-df6 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police6.csv")
+df1 = pd.read_csv("Police1.csv")
+df2 = pd.read_csv("Police2.csv")
+df3 = pd.read_csv("Police3.csv")
+df4 = pd.read_csv("Police4.csv")
+df5 = pd.read_csv("Police5.csv")
+df6 = pd.read_csv("Police6.csv")
 
 df = df_final = pd.concat([df1, df2, df3, df4, df5, df6], ignore_index=True)
 
