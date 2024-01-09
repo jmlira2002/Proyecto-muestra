@@ -27,7 +27,7 @@ def login():
 
     if login_button:
         # Verifica las credenciales (deberías tener tu propia lógica aquí)
-        if username == "usuario" and password == "contrasena":
+        if username == "anthony" and password == "pruebastream":
             st.session_state.authenticated = True
             st.success("Inicio de sesión exitoso")
         else:
