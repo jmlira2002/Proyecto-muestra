@@ -35,7 +35,15 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-df = pd.read_csv("C:\Vscode\Police_Department_Incident_Reports__2018_to_Present.csv")
+df1 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police1.csv")
+df2 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police2.csv")
+df3 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police3.csv")
+df4 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police4.csv")
+df5 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police5.csv")
+df6 = pd.read_csv(r"C:\Vscode\Muestra proyecto\Police6.csv")
+
+df = df_final = pd.concat([df1, df2, df3, df4, df5, df6], ignore_index=True)
+
 df['Incident Date'] = pd.to_datetime(df['Incident Date'])
 df['Incident Datetime'] = pd.to_datetime(df['Incident Datetime'])
 st.markdown('The data shown below belongs to incident reports in the city of San Francisco, from the year 2018 to 2020, with details from each case such as date, day of the week, police district, neighborhood in which it happened, type of incident in category and subcategory, exact location and resolution.')
