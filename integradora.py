@@ -143,13 +143,14 @@ grouped_data['Percentage'] = grouped_data['Total Crimes'] / grouped_data['Total 
 
 #figcrimes = px2.sunburst(grouped_data, path=['Incident Category', 'Incident Subcategory'], values='Total Crimes')
 
-figcrimes = px2.sunburst(grouped_data, path=['Incident Category', 'Incident Subcategory'], values='Total Crimes', color='Percentage', color_continuous_scale='ice',title='Crimes by Category and Subcategory')
+#figcrimes = px2.sunburst(grouped_data, path=['Incident Category', 'Incident Subcategory'], values='Total Crimes', color='Percentage', color_continuous_scale='ice',title='Crimes by Category and Subcategory')
 #figcrimes.update_traces(hovertemplate='<b>%{label}</b><br>Total Crimes: %{value}<br>Percentage: %{color:.2f}%')
 #figcrimes.update_layout(width = 400)
 
-col= st.columns([800,400])
+#col= st.columns([800,400])
+col= st.columns([1200])
 with col[0]:
  st.plotly_chart(figbar)
-with col[1]:
- st.plotly_chart(figcrimes)
+#with col[1]:
+ #st.plotly_chart(figcrimes)
 st.write('#### ← I recommend that you visit your neighborhood')
